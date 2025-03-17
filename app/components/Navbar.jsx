@@ -1,6 +1,7 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useRef, useState, useEffect } from 'react'
+import {motion} from "motion/react"
 
 const Navbar = ({isDarkMode, setIsDarkMode}) => {
   const sideMenuRef = useRef();
