@@ -22,9 +22,10 @@ const config = {
       },
       gridTemplateColumns: {
         'auto': 'repeat(auto-fit, minmax(280px, 1fr))',
-      }      
+      },   
     },
   },
+  darkMode: 'selector',
   plugins: [],
 };
 

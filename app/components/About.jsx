@@ -4,11 +4,11 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div id='about' className='w-full min-h-screen bg-gray-50'>
+    <div id='about' className='w-full min-h-screen bg-gray-50 dark:bg-darkTheme'>
       <div className='max-w-[1400px] mx-auto px-6 lg:px-12 py-20'>
         <div className='text-center mb-16'>
-          <h4 className='text-lg text-gray-600 mb-2'>Introduction</h4>
-          <h2 className='text-5xl font-semibold'>About me</h2>
+          <h4 className='text-lg text-gray-600 dark:text-gray-400 mb-2'>Introduction</h4>
+          <h2 className='text-5xl font-semibold dark:text-white'>About me</h2>
         </div>
         
         <div className='flex w-full flex-col lg:flex-row items-start gap-12 lg:gap-20'>
@@ -23,7 +23,7 @@ const About = () => {
           </div>
 
           <div className='flex-1'>
-            <p className='text-lg text-gray-700 leading-relaxed mb-12'>
+            <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-12'>
               I am an experienced Software Engineer with over 2 years of professional experience in the field. 
               Throughout my career, I have had the privilege of being at the forefront of multiple businesses 
               and start-ups, contributing to their success and growth.
@@ -33,18 +33,24 @@ const About = () => {
               {infoList.map(({icon, iconDark, title, description}, index) => (
                 <li 
                   key={index}
-                  className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black'
+                  className='bg-white dark:bg-darkTheme border border-gray-200 dark:border-gray-700 
+                           rounded-xl p-6 cursor-pointer hover:bg-lightHover dark:hover:bg-darkHover 
+                           hover:-translate-y-1 hover:shadow-black transform transition-all duration-300'
                 >
                   <Image src={icon} alt={title} className='w-8 mb-4'/>
-                  <h3 className='text-xl font-semibold text-gray-800 mb-3'>{title}</h3>
-                  <p className='text-gray-600'>{description}</p>
+                  <h3 className='text-xl font-semibold text-gray-800 dark:text-white mb-3'>{title}</h3>
+                  <p className='text-gray-600 dark:text-gray-400'>{description}</p>
                 </li>
               ))}
             </ul>
-            <h4 className='my-6 text-gray-700'>Tools I use</h4>
+            <h4 className='my-6 text-gray-700 dark:text-gray-300'>Tools I use</h4>
             <ul className='flex items-center gap-3 sm:gap-5'>
               {toolsData.map((tool,index)=>(
-                <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500' key={index} >
+                <li className='flex items-center justify-center w-12 sm:w-14 aspect-square 
+                             bg-white dark:bg-darkTheme border border-gray-400 dark:border-gray-700 
+                             rounded-lg cursor-pointer hover:-translate-y-1 duration-500' 
+                    key={index}
+                >
                   <Image src={tool} alt='Tool' className='w-5 sm:w-7'/>
                 </li>
               ))}
