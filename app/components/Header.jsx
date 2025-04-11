@@ -50,7 +50,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className='text-3xl sm:text-6xl lg:text-[66px] font-bold text-black dark:text-white'
       >
-        Software Engineer
+        Software Engineer 
       </motion.h1>
 
       <motion.p 
@@ -59,7 +59,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className='max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300'
       >
-        I love building scalable applications with powerful backend systems that make things run smoothly. My passion is creating intuitive experiences that feel natural and effortless for everyone who uses them.
+        I'm a Software Engineer based in Los Angeles, CA. I love building scalable applications with powerful backend systems that make things run smoothly. My passion is creating intuitive experiences that feel natural and effortless for everyone who uses them.
       </motion.p>
 
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-6'>

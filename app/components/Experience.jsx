@@ -172,13 +172,13 @@ const Experience = () => {
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`relative mb-16 ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'} w-1/2`}
+              className={`relative mb-16 ${index % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'} w-full lg:w-1/2`}
             >
               <motion.div
                 whileHover={{ scale: 1.02 }}
-                className={`p-6 rounded-xl bg-white dark:bg-darkTheme border border-gray-200 dark:border-gray-700 
-                  shadow-lg hover:shadow-xl transition-shadow duration-300 ${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}>
-                <div className='mb-4 flex items-start gap-4'>
+                className={`p-4 sm:p-6 rounded-xl bg-white dark:bg-darkTheme border border-gray-200 dark:border-gray-700 
+                  shadow-lg hover:shadow-xl transition-shadow duration-300 ${index % 2 === 0 ? 'lg:ml-8' : 'lg:mr-8'}`}>
+                <div className='mb-4 flex flex-col sm:flex-row items-start gap-4'>
                   <div className='relative w-16 h-16 rounded-lg overflow-hidden bg-white p-2'>
                     {exp.logo ? (
                       <Image
@@ -193,7 +193,7 @@ const Experience = () => {
                       </div>
                     )}
                   </div>
-                  <div>
+                  <div className='flex-1'>
                     <h3 className='text-xl font-semibold dark:text-white'>{exp.role}</h3>
                     <p className='text-gray-600 dark:text-gray-400'>{exp.company}</p>
                     <p className='text-sm text-gray-500 dark:text-gray-500'>{exp.period}</p>
@@ -201,70 +201,108 @@ const Experience = () => {
                   </div>
                 </div>
 
-                {/* Technologies */}
                 <div className='flex flex-wrap gap-2 mb-4'>
-                  {exp.technologies.map((tech, i) => (
-                    <motion.span
-                      key={i}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.3, delay: i * 0.1 }}
-                      className='px-3 py-1 text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full'
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className='px-2 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full'
                     >
                       {tech}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
 
-                <ul className='space-y-2'>
-                  {exp.achievements.map((achievement, i) => (
-                    <motion.li
-                      key={i}
+                <div className='space-y-3'>
+                  {exp.achievements.map((achievement, achievementIndex) => (
+                    <motion.div
+                      key={achievementIndex}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: i * 0.1 + index * 0.2 }}
-                      className='flex flex-col gap-2 text-gray-700 dark:text-gray-300 cursor-pointer'
-                      onClick={() => setExpandedAchievement(expandedAchievement === `${index}-${i}` ? null : `${index}-${i}`)}
+                      transition={{ duration: 0.5, delay: achievementIndex * 0.1 }}
+                      className='cursor-pointer'
+                      onClick={() => setExpandedAchievement(expandedAchievement === achievementIndex ? null : achievementIndex)}
                     >
-                      <div className='flex items-start gap-2'>
-                        <span className='text-green-500 mt-1'>•</span>
-                        <span className='hover:text-blue-500 dark:hover:text-blue-400 transition-colors'>
-                          {achievement.text}
-                        </span>
+                      <div className='p-3 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300'>
+                        <div className='flex items-center justify-between'>
+                          <p className='font-medium text-gray-800 dark:text-gray-200'>{achievement.text}</p>
+                          <motion.div
+                            animate={{ rotate: expandedAchievement === achievementIndex ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <svg className='w-5 h-5 text-gray-500' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+                            </svg>
+                          </motion.div>
+                        </div>
+                        {expandedAchievement === achievementIndex && (
+                          <motion.p
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className='mt-2 text-gray-600 dark:text-gray-400 text-sm'
+                          >
+                            {achievement.details}
+                          </motion.p>
+                        )}
                       </div>
-                      {expandedAchievement === `${index}-${i}` && (
-                        <motion.p
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className='pl-6 text-sm text-gray-600 dark:text-gray-400'
-                        >
-                          {achievement.details}
-                        </motion.p>
-                      )}
-                    </motion.li>
+                    </motion.div>
                   ))}
-                </ul>
+                </div>
 
-                {/* Preview Button - Only show for first 3 experiences */}
                 {exp.preview && (
-                  <motion.a
-                    href={exp.preview.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className='mt-4 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors inline-flex items-center'
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className='mt-6'
                   >
-                    Visit Website
-                    <Image
-                      src={assets.right_arrow}
-                      alt="arrow"
-                      width={16}
-                      height={16}
-                      className="ml-2"
-                    />
-                  </motion.a>
+                    <button
+                      onClick={() => setSelectedPreview(selectedPreview === index ? null : index)}
+                      className='w-full py-2 px-4 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300 flex items-center justify-between'
+                    >
+                      <span>Show Preview</span>
+                      <motion.div
+                        animate={{ rotate: selectedPreview === index ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <svg className='w-5 h-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                          <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
+                        </svg>
+                      </motion.div>
+                    </button>
+
+                    {selectedPreview === index && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className='mt-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg'
+                      >
+                        <h4 className='text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2'>{exp.preview.title}</h4>
+                        <p className='text-gray-600 dark:text-gray-400 mb-4'>{exp.preview.description}</p>
+                        <div className='relative w-full h-48 rounded-lg overflow-hidden'>
+                          <Image
+                            src={exp.preview.image}
+                            alt={exp.preview.title}
+                            fill
+                            className='object-cover'
+                          />
+                        </div>
+                        {exp.preview.link && (
+                          <a
+                            href={exp.preview.link}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-300'
+                          >
+                            View Project
+                          </a>
+                        )}
+                      </motion.div>
+                    )}
+                  </motion.div>
                 )}
               </motion.div>
 
