@@ -33,15 +33,24 @@ const Work = () => {
               key={index} 
               className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
               style={{backgroundImage: `url(${project.bgImage})`}}>
-              <div className='bg-white dark:bg-darkTheme dark:border dark:border-gray-700 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex justify-between items-center duration-500 group-hover:bottom-7'>
-                <div className='p-5'>
-                  <h2 className='font-semibold dark:text-white'>{project.title}</h2>
-                  <p className='text-sm text-gray-700 dark:text-gray-400'>{project.description}</p>
-                </div>    
-                <div className='border rounded-full border-black dark:border-white w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#fff] group-hover:bg-lime-300 dark:group-hover:bg-lime-500 transition'>
-                  <Image src={assets.send_icon} alt='send icon' className='w-5'></Image>
+              <a 
+                href={index === 1 ? "https://drive.google.com/drive/folders/1rYpNAXNnlAD9hjhLBfMQlKjqF1qxDTYk" : 
+                      index === 2 ? "https://github.com/undahveeti/mern-LMS-vitalis" :
+                      index === 3 ? "https://github.com/undahveeti/jjamppong_zizon_website" : "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10"
+              >
+                <div className='bg-white dark:bg-darkTheme dark:border dark:border-gray-700 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex justify-between items-center duration-500 group-hover:bottom-7'>
+                  <div className='p-5'>
+                    <h2 className='font-semibold dark:text-white'>{project.title}</h2>
+                    <p className='text-sm text-gray-700 dark:text-gray-400'>{project.description}</p>
+                  </div>    
+                  <div className='border rounded-full border-black dark:border-white w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#fff] group-hover:bg-lime-300 dark:group-hover:bg-lime-500 transition'>
+                    <Image src={assets.send_icon} alt='send icon' className='w-5'></Image>
+                  </div>
                 </div>
-              </div>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -51,7 +60,9 @@ const Work = () => {
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
-          href="" 
+          href="https://github.com/undahveeti" 
+          target="_blank"
+          rel="noopener noreferrer"
           className='w-max flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300 
                      border border-gray-300 dark:border-gray-700 rounded-full py-3 px-10 mx-auto my-20 
                      hover:bg-lightHover dark:hover:bg-darkHover duration-500'>

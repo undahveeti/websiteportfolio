@@ -37,9 +37,8 @@ import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import voodies_logo from './voodies_logo.png';
 import vitalis_icon from './vitalis_icon.png';
-import jjamppong_logo from './jjamppong_logo.png';
-import evara_logo from './evara_logo.png';
 import ucr_logo from './ucr-logo.png';
+import jjamppong_logo from './jjamppong_logo.png';
 import gatech_logo from './gatech-logo.png';
 import js_icon from './javascript-icon.png';
 import ts_icon from './typescript-icon.png';
@@ -54,7 +53,7 @@ import cplusplus_icon from './cplusplus-icon.png';
 import docker_icon from './docker-icon.png';
 import supabase_icon from './supabase-icon.png';
 import next_icon from './next-icon.png';
-
+import evara_logo from './evara_logo.png';
 export const assets = {
     user_image,
     code_icon,
@@ -116,23 +115,23 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Spoiler Alert',
+        description: 'AI/NLP based TV Series Analysis System',
         bgImage: '/work-1.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Voodies',
+        description: 'Food Centric Mobile App',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'LMS for Stealth Startup',
+        description: 'Industry Level Learning Management System',
         bgImage: '/work-3.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'JJamppong Zizon',
+        description: 'Full Stack Website Redesign ',
         bgImage: '/work-4.png',
     },
 ]

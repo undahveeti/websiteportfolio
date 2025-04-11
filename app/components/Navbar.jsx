@@ -42,7 +42,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         <li><a href="#services" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Services</a></li>
         <li><a href="#experience" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Experience</a></li>
         <li><a href="#work" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">My Work</a></li>
-        <li><a href="#contact" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Contact me</a></li>
       </ul>
       <div className='flex items-center gap-4 absolute right-5 lg:right-8 xl:right-[8%]'>
         <button onClick={()=>setIsDarkMode(prev => !prev)}>

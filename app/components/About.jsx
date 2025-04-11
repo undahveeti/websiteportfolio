@@ -41,9 +41,7 @@ const About = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-12'>
-              I am an experienced Software Engineer with over 2 years of professional experience in the field. 
-              Throughout my career, I have had the privilege of being at the forefront of multiple businesses 
-              and start-ups, contributing to their success and growth.
+              Accomplished Software Engineer who been at the forefront of multiple startups, leading development teams to reduce operational costs through process automation, optimized system architecture and increased user growth.
             </motion.p>
 
             <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12'>
