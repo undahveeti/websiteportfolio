@@ -39,8 +39,8 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         ${isScrolled ? "" : "bg-white dark:bg-darkTheme border dark:border-gray-400 shadow-sm bg-opacity-50 dark:bg-opacity-50"}`}>
         <li><a href="#top" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Home</a></li>
         <li><a href="#about" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">About me</a></li>
-        <li><a href="#experience" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Experience</a></li>
         <li><a href="#services" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Services</a></li>
+        <li><a href="#experience" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Experience</a></li>
         <li><a href="#work" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">My Work</a></li>
         <li><a href="#blog" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Blog</a></li>
         <li><a href="#contact" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Contact me</a></li>
@@ -67,8 +67,8 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         </div>
         <li><a onClick={closeMenu} href="#top" className="dark:text-white">Home</a></li>
         <li><a onClick={closeMenu} href="#about" className="dark:text-white">About me</a></li>
-        <li><a onClick={closeMenu} href="#experience" className="dark:text-white">Experience</a></li>
         <li><a onClick={closeMenu} href="#services" className="dark:text-white">Services</a></li>
+        <li><a onClick={closeMenu} href="#experience" className="dark:text-white">Experience</a></li>
         <li><a onClick={closeMenu} href="#work" className="dark:text-white">My Work</a></li>
         <li><a onClick={closeMenu} href="#blog" className="dark:text-white">Blog</a></li>
         <li><a onClick={closeMenu} href="#contact" className="dark:text-white">Contact me</a></li>

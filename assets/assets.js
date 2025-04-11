@@ -33,6 +33,21 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import ucr_logo from './ucr-logo.png';
+import gatech_logo from './gatech-logo.png';
+import js_icon from './javascript-icon.png';
+import ts_icon from './typescript-icon.png';
+import python_icon from './python-icon.png';
+import java_icon from './java-icon.png';
+import react_icon from './react-icon.png';
+import flutter_icon from './flutter-icon.png';
+import swift_icon from './swift-icon.png';
+import sql_icon from './sql-icon.png';
+import dart_icon from './dart-icon.png';
+import cplusplus_icon from './cplusplus-icon.png';
+import docker_icon from './docker-icon.png';
+import supabase_icon from './supabase-icon.png';
+import next_icon from './next-icon.png';
 
 export const assets = {
     user_image,
@@ -69,7 +84,22 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    ucr_logo,
+    gatech_logo,
+    js_icon,
+    ts_icon,
+    python_icon,
+    java_icon,
+    react_icon,
+    flutter_icon,
+    swift_icon,
+    sql_icon,
+    dart_icon,
+    cplusplus_icon,
+    docker_icon,
+    supabase_icon,
+    next_icon
 };
 
 export const workData = [
@@ -103,11 +133,56 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { 
+        icon: assets.code_icon, 
+        iconDark: assets.code_icon_dark, 
+        title: 'Languages', 
+        description: '',
+        icons: [
+            { src: assets.js_icon, alt: 'JavaScript' },
+            { src: assets.ts_icon, alt: 'TypeScript' },
+            { src: assets.python_icon, alt: 'Python' },
+            { src: assets.java_icon, alt: 'Java' },
+            { src: assets.dart_icon, alt: 'Dart' },
+            { src: assets.swift_icon, alt: 'Swift' },
+            { src: assets.cplusplus_icon, alt: 'C++' },
+            { src: assets.sql_icon, alt: 'SQL' }
+        ]
+    },
+    { 
+        icon: assets.edu_icon, 
+        iconDark: assets.edu_icon_dark, 
+        title: 'Education', 
+        description: '',
+        logos: [
+            { src: assets.ucr_logo, alt: 'UC Riverside', text: 'B.S in Computer Science' },
+            { src: assets.gatech_logo, alt: 'Georgia Tech', text: 'M.S in Computer Science' }
+        ]
+    },
+    { 
+        icon: assets.project_icon, 
+        iconDark: assets.project_icon_dark, 
+        title: 'Projects', 
+        description: 'Built more than 10 projects',
+        link: '#work'
+    }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    // Frontend Frameworks
+    { src: assets.react_icon, alt: 'React' },
+    { src: assets.next_icon, alt: 'Next.js' },
+    { src: assets.flutter_icon, alt: 'Flutter' },
+    { src: assets.swift_icon, alt: 'Swift' },
+    
+    // Backend & Databases
+    { src: assets.firebase, alt: 'Firebase' },
+    { src: assets.mongodb, alt: 'MongoDB' },
+    { src: assets.supabase_icon, alt: 'Supabase' },
+    
+    // Development Tools
+    { src: assets.vscode, alt: 'VS Code' },
+    { src: assets.git, alt: 'Git' },
+    { src: assets.figma, alt: 'Figma' },
+    { src: assets.docker_icon, alt: 'Docker' }
 ];
