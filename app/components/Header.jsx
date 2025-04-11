@@ -86,8 +86,8 @@ const Header = () => {
           whileInView={{ y: 0, opacity: 1 }}
           whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href="/-resume.pdf" 
-          download 
+          href="/Tran_Andy_Resume_2025.pdf" 
+          download="Tran_Andy_Resume_2025.pdf"
           className='px-10 py-3 rounded-full border border-gray-300 dark:border-gray-700 flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800'
         >
           Download CV
