@@ -35,6 +35,10 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import voodies_logo from './voodies_logo.png';
+import vitalis_icon from './vitalis_icon.png';
+import jjamppong_logo from './jjamppong_logo.png';
+import evara_logo from './evara_logo.png';
 import ucr_logo from './ucr-logo.png';
 import gatech_logo from './gatech-logo.png';
 import js_icon from './javascript-icon.png';
@@ -103,7 +107,11 @@ export const assets = {
     supabase_icon,
     next_icon,
     ai_icon,
-    cloud_icon
+    cloud_icon,
+    vitalis_icon,
+    voodies_logo,
+    jjamppong_logo,
+    evara_logo
 };
 
 export const workData = [

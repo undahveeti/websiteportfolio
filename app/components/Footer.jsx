@@ -15,7 +15,7 @@ const Footer = ({isDarkMode}) => {
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}>
-          <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='logo' className='w-36 mx-auto mb-2'/>
+          <h2 className='text-2xl font-semibold dark:text-white mb-2'>Andy Tran</h2>
         </motion.div>
         <motion.div 
           initial={{ opacity: 0 }}

@@ -1,20 +1,24 @@
-import web_icon from '../public/web-icon.png'
-import mobile_icon from '../public/mobile-icon.png'
-import backend_icon from '../public/backend-icon.png'
-import right_arrow from '../public/right-arrow.png'
-import right_arrow_white from '../public/right-arrow-white.png'
-import right_arrow_bold from '../public/right-arrow-bold.png'
-import send_icon from '../public/send-icon.png'
-import footer_bg from '../public/footer-bg-color.png'
-import profile from '../public/profile.png'
-import ucr_logo from '../public/ucr-logo.png'
-import gatech_logo from '../public/gatech-logo.png'
-import js_icon from '../public/js-icon.png'
-import ts_icon from '../public/ts-icon.png'
-import python_icon from '../public/python-icon.png'
-import java_icon from '../public/java-icon.png'
-import ai_icon from './ai-icon.png'
-import cloud_icon from './cloud-icon.png'
+import web_icon from '@/../assets/web-icon.png'
+import mobile_icon from '@/../assets/mobile-icon.png'
+import backend_icon from '@/../assets/backend-icon.png'
+import right_arrow from '@/../assets/right-arrow.png'
+import right_arrow_white from '@/../assets/right-arrow-white.png'
+import right_arrow_bold from '@/../assets/right-arrow-bold.png'
+import send_icon from '@/../assets/send-icon.png'
+import footer_bg from '@/../assets/footer-bg-color.png'
+import profile from '@/../assets/profile.png'
+import ucr_logo from '@/../assets/ucr-logo.png'
+import gatech_logo from '@/../assets/gatech-logo.png'
+import js_icon from '@/../assets/javascript-icon.png'
+import ts_icon from '@/../assets/typescript-icon.png'
+import python_icon from '@/../assets/python-icon.png'
+import java_icon from '@/../assets/java-icon.png'
+import ai_icon from '@/../assets/ai-icon.png'
+import cloud_icon from '@/../assets/cloud-icon.png'
+import voodies_logo from '@/../assets/voodies_logo.png'
+import vitalis_icon from '@/../assets/vitalis_icon.png'
+import jjamppong_logo from '@/../assets/jjamppong_logo.png'
+import evara_logo from '@/../assets/evara_logo.png'
 
 export const assets = {
   web_icon,
@@ -33,7 +37,11 @@ export const assets = {
   python_icon,
   java_icon,
   ai_icon,
-  cloud_icon
+  cloud_icon,
+  voodies_logo,
+  vitalis_icon,
+  jjamppong_logo,
+  evara_logo
 }
 
 export const serviceData = [
