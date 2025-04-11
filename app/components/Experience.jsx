@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import { assets } from '@/assets/assets'
 import {motion} from "motion/react"
 
 const Experience = () => {
@@ -13,8 +11,7 @@ const Experience = () => {
         "Led development of a scalable microservices architecture",
         "Reduced API response time by 40% through optimization",
         "Implemented CI/CD pipeline reducing deployment time by 60%"
-      ],
-      logo: assets.company1 // You'll need to add this to your assets
+      ]
     },
     {
       company: "Innovate Solutions",
@@ -24,8 +21,7 @@ const Experience = () => {
         "Developed and maintained full-stack applications",
         "Implemented automated testing reducing bugs by 30%",
         "Collaborated with cross-functional teams on major features"
-      ],
-      logo: assets.company2 // You'll need to add this to your assets
+      ]
     }
   ];
 
@@ -62,15 +58,10 @@ const Experience = () => {
             >
               <div className={`p-6 rounded-xl bg-white dark:bg-darkTheme border border-gray-200 dark:border-gray-700 
                 shadow-lg hover:shadow-xl transition-shadow duration-300 ${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}>
-                <div className='flex items-center gap-4 mb-4'>
-                  <div className='w-12 h-12 rounded-full overflow-hidden bg-white dark:bg-darkTheme p-2'>
-                    <Image src={exp.logo} alt={`${exp.company} logo`} className='w-full h-full object-contain'/>
-                  </div>
-                  <div>
-                    <h3 className='text-xl font-semibold dark:text-white'>{exp.role}</h3>
-                    <p className='text-gray-600 dark:text-gray-400'>{exp.company}</p>
-                    <p className='text-sm text-gray-500 dark:text-gray-500'>{exp.period}</p>
-                  </div>
+                <div className='mb-4'>
+                  <h3 className='text-xl font-semibold dark:text-white'>{exp.role}</h3>
+                  <p className='text-gray-600 dark:text-gray-400'>{exp.company}</p>
+                  <p className='text-sm text-gray-500 dark:text-gray-500'>{exp.period}</p>
                 </div>
                 <ul className='space-y-2'>
                   {exp.achievements.map((achievement, i) => (

@@ -28,6 +28,8 @@ import close_white from './close-white.png';
 import web_icon from './web-icon.png';
 import mobile_icon from './mobile-icon.png';
 import ui_icon from './ui-icon.png';
+import ai_icon from './ai-icon.png';
+import cloud_icon from './cloud-icon.png';
 import graphics_icon from './graphics-icon.png';
 import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
@@ -99,7 +101,9 @@ export const assets = {
     cplusplus_icon,
     docker_icon,
     supabase_icon,
-    next_icon
+    next_icon,
+    ai_icon,
+    cloud_icon
 };
 
 export const workData = [
@@ -126,11 +130,31 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
+    { 
+        icon: assets.web_icon, 
+        title: 'Full Stack Development', 
+        description: 'Building scalable web applications using React, Next.js, Node.js, and modern web technologies. Expertise in both frontend and backend development.',
+        link: '' 
+    },
+    { 
+        icon: assets.mobile_icon, 
+        title: 'Mobile Development', 
+        description: 'Creating cross-platform mobile applications using Flutter and native iOS development with Swift. Focus on performance and user experience.',
+        link: '' 
+    },
+    { 
+        icon: assets.ai_icon, 
+        title: 'Machine Learning & AI', 
+        description: 'Developing and deploying machine learning models, working with TensorFlow, and implementing AI solutions for real-world applications.',
+        link: '' 
+    },
+    { 
+        icon: assets.cloud_icon, 
+        title: 'Cloud & Infrastructure', 
+        description: 'Designing and implementing cloud architectures, containerization with Docker, and setting up scalable infrastructure solutions.',
+        link: '' 
+    }
+];
 
 export const infoList = [
     { 

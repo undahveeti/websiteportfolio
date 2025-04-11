@@ -42,7 +42,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         <li><a href="#services" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Services</a></li>
         <li><a href="#experience" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Experience</a></li>
         <li><a href="#work" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">My Work</a></li>
-        <li><a href="#blog" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Blog</a></li>
         <li><a href="#contact" className="dark:text-white hover:text-gray-600 dark:hover:text-gray-300">Contact me</a></li>
       </ul>
       <div className='flex items-center gap-4 absolute right-5 lg:right-8 xl:right-[8%]'>
@@ -70,7 +69,6 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         <li><a onClick={closeMenu} href="#services" className="dark:text-white">Services</a></li>
         <li><a onClick={closeMenu} href="#experience" className="dark:text-white">Experience</a></li>
         <li><a onClick={closeMenu} href="#work" className="dark:text-white">My Work</a></li>
-        <li><a onClick={closeMenu} href="#blog" className="dark:text-white">Blog</a></li>
         <li><a onClick={closeMenu} href="#contact" className="dark:text-white">Contact me</a></li>
       </ul>
     </nav>

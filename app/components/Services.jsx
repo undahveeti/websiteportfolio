@@ -20,7 +20,6 @@ const Services = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-8'>
-            I am a Software Engineer with 2+ years of experience, forefronting startups and automating processes for cost reduction.
           </motion.p>
         </motion.div>
 
@@ -33,8 +32,7 @@ const Services = () => {
               key={index} 
               className='border border-gray-200 dark:border-gray-700 rounded-xl px-8 py-12 
                        bg-white dark:bg-darkTheme hover:bg-lightHover dark:hover:bg-darkHover 
-                       hover:-translate-y-1 hover:shadow-black cursor-pointer 
-                       transform transition-all duration-300'
+                       hover:-translate-y-1 hover:shadow-black transform transition-all duration-300'
             >
               <motion.div
                 initial={{ scale: 0 }}
@@ -56,9 +54,11 @@ const Services = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
-                href={link} 
+                href="https://medium.com/@avtran0806" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className='flex items-center gap-2 mt-6 text-gray-700 dark:text-gray-300 
-                          hover:text-gray-900 dark:hover:text-white group'>
+                          hover:text-gray-900 dark:hover:text-white group cursor-pointer'>
                 Read more 
                 <Image alt='arrow' src={assets.right_arrow} className='w-4 group-hover:translate-x-1 transition-transform'/>
               </motion.a>
